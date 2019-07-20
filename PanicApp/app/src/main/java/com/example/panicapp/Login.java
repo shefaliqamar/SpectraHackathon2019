@@ -148,8 +148,10 @@ public class Login extends AppCompatActivity {
         }
     }
 
+    /*
     public void signup(View view) {
         Intent intent = new Intent(this, signupActivity.class);
         startActivity(intent);
     }
+    */
 }
