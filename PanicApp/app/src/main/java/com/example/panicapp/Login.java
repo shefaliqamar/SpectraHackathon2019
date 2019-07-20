@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -29,6 +30,7 @@ public class Login extends AppCompatActivity {
     String usernameResult;
     String passwordResult;
     String loginResult;
+    Button loggedIn;
     public static String currentUserName;
     public static Integer currentUserID;
     public boolean successfullLogin = false;
@@ -40,19 +42,31 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
+        loggedIn = (Button)findViewById(R.id.loggedIn);
 //      You must define mqueue as a Volley request, or it will not work
         mqueue = Volley.newRequestQueue(this);
+
+        /*
+        loggedIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login(v);
+            }
+        });
+        */
     }
 
     public void goToHome(View view) {
         // when called this will take you to the homeActivity where you have a menu
-        Intent intent = new Intent(this, Home.class);
+        Intent intent = new Intent(Login.this, Home.class);
         startActivity(intent);
     }
     //  When called, it will call jsonparse which handles login data
     public void login(View view) {
         Log.d("log", "clicked log in!");
         jsonParse();
+        if(successfullLogin)
+            goToHome(view);
     }
 
 
@@ -76,7 +90,7 @@ public class Login extends AppCompatActivity {
         urlAddUser+=passwordResult;
         android.util.Log.d("log", urlAddUser);
         //====================== START OF GET USER ID API REQUEST ==============================
-        String urlGetUserID = "http://178.128.182.144:5000/getUsername/";
+        String urlGetUserID = "http://178.128.182.144:5000/login/";
         Log.d("log", "about to get the user id of: " +currentUserName);
         urlGetUserID +=currentUserName;
         Log.d("log", urlGetUserID);
