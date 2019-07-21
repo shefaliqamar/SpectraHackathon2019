@@ -31,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button soothe = findViewById(R.id.soothe);
+        login.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, panicWidget.class));
+                finish();
+            }
+        });
+
     }
 
 

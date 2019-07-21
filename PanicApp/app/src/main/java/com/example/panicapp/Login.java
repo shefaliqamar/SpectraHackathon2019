@@ -42,18 +42,16 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
-        loggedIn = (Button)findViewById(R.id.loggedIn);
+        loggedIn = (Button) findViewById(R.id.loggedIn);
 //      You must define mqueue as a Volley request, or it will not work
         mqueue = Volley.newRequestQueue(this);
 
-        /*
         loggedIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                login(v);
+                goToHome(v);
             }
         });
-        */
     }
 
     public void goToHome(View view) {

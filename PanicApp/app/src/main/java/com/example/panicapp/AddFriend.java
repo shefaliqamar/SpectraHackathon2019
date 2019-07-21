@@ -6,19 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Focus extends AppCompatActivity {
+public class AddFriend extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_focus);
+        setContentView(R.layout.activity_add_friend);
 
-        Button next = (Button)findViewById(R.id.next);
-        next.setOnClickListener(new View.OnClickListener() {
+        Button cancel = (Button)findViewById(R.id.cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Focus.this, HappyPlace.class);
+                Intent intent = new Intent(AddFriend.this, Home.class);
                 startActivity(intent);
             }
         });
+
     }
 }
