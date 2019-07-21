@@ -8,6 +8,17 @@ import android.widget.Button;
 import com.twilio.Twilio;
 import com.twilio.type.PhoneNumber;
 import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.http.TwilioRestClient;
+import com.twilio.rest.api.v2010.account.MessageCreator;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
 
 
 public class panicWidget extends AppCompatActivity {
@@ -50,20 +61,21 @@ public class panicWidget extends AppCompatActivity {
         );
         Volley.newRequestQueue(context).add(request); */
 
-        final String ACCOUNT_SID = "ACe977c90ea5e3bfeb2534e1df1a9af9ce";
+        /*final String ACCOUNT_SID = "ACe977c90ea5e3bfeb2534e1df1a9af9ce";
         final String AUTH_TOKEN =  "2046323e3f657aca222bd96b6f142b25";
 
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         Message message = Message.creator(
-        new PhoneNumber(System.getenv("MY_PHONE_NUMBER")),
-                new PhoneNumber("+4086470140"),
-
-                "HELL O IT WORKS OMG"
+            new PhoneNumber(System.getenv("MY_PHONE_NUMBER")),
+            new PhoneNumber("+4086470140"),
+            "HELL O IT WORKS OMG"
 
         ).create();
 
-        System.out.println(message.getSid());
+        System.out.println(message.getSid()); */
+
+
     }
 
 }
