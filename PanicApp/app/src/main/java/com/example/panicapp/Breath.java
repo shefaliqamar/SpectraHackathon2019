@@ -35,8 +35,8 @@ public class Breath extends AppCompatActivity {
 
             public void onFinish() {
                 secLeft.setText("done!");
-
-                
+                Intent intent = new Intent(Breath.this, Focus.class);
+                startActivity(intent);
             }
         }.start();
 
