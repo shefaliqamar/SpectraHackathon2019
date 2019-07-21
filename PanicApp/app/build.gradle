@@ -16,6 +16,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+        packagingOptions {
+            exclude 'META-INF/DEPENDENCIES'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/license.txt'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/notice.txt'
+            exclude 'META-INF/ASL2.0'
+        }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -32,4 +47,14 @@ dependencies {
     implementation 'org.slf4j:slf4j-simple:1.6.+'
     implementation 'com.sparkjava:spark-core:2.5.+'
     implementation 'com.twilio.sdk:twilio:7.+'
+
+    //implementation group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
+
+    /*implementation ('com.coinbase.android:coinbase-android-sdk:1.0.1'){
+        exclude group: 'org.apache.httpcomponents', module:'httpclient'
+    }
+
+    implementation("org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.1") {
+        exclude group: 'org.apache.oltu.oauth2', module: 'org.apache.oltu.oauth2.common'
+    } */
 }
