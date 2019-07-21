@@ -48,9 +48,12 @@ dependencies {
     implementation 'com.sparkjava:spark-core:2.5.+'
     implementation 'com.twilio.sdk:twilio:7.+'
 
+<<<<<<< HEAD
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
     implementation 'com.squareup.okhttp3:okhttp:3.2.0'
+=======
+>>>>>>> 4bf70181b51605bc285ede69ae89e18c6fc027ba
 
     //implementation group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
 

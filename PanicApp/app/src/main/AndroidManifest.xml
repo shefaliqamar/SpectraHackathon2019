@@ -11,10 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
 
         <activity android:name=".EmergencyMessage"></activity>
 
         <activity android:name=".AddFriend"></activity>
+=======
+        <activity android:name=".EmergencyMessage"></activity>
+
+        <activity android:name=".AddFriend" />
+>>>>>>> 4bf70181b51605bc285ede69ae89e18c6fc027ba
         <activity android:name=".HappyPlace" />
 
         <activity android:name=".Focus" />
