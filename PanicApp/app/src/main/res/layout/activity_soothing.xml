@@ -8,9 +8,13 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="297dp"
-        android:layout_height="205dp"
-        android:text="Breathing"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="97dp" />
+        android:layout_width="385dp"
+        android:layout_height="392dp"
+        android:gravity="center"
+        android:text="Let's start soothing"
+        android:textColor="@android:color/black"
+        android:textSize="100sp"
+        app:fontFamily="cursive"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="169dp" />
 </android.support.constraint.ConstraintLayout>

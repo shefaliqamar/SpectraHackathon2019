@@ -22,6 +22,6 @@ public class Soothing extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 5000);
+        }, 2000);
     }
 }
