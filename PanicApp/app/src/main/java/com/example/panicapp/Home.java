@@ -22,7 +22,7 @@ public class Home extends AppCompatActivity {
 
         });
 
-        final Button addFriend = (Button)findViewById(R.id.addfriend);
+        Button addFriend = (Button)findViewById(R.id.addfriend);
         addFriend.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, AddFriend.class);

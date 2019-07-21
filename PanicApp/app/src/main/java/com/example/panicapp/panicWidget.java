@@ -21,7 +21,7 @@ public class panicWidget extends AppCompatActivity {
         alert = (Button)findViewById(R.id.alertFriend);
         alert.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                messageFriend();
+                //messageFriend();
                 Intent intent = new Intent(panicWidget.this, Soothing.class);
                 startActivity(intent);
             }
