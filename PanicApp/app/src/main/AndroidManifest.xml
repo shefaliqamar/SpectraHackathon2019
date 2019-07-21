@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddFriend"></activity>
+        <activity android:name=".EmergencyMessage"></activity>
+
+        <activity android:name=".AddFriend" />
         <activity android:name=".HappyPlace" />
         <activity android:name=".Focus" />
         <activity android:name=".Breath" />
